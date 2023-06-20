@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 export interface CertificateProps {
   name: string;
-  certificateId: string,
+  certificateId: string | string[],
   dateIssued: string,
 };
 
