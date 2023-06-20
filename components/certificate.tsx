@@ -187,7 +187,7 @@ export const Certificate: FC<CertificateProps> =  ({ name, certificateId, dateIs
           className="block text-xs font-bold leading-normal text-gray-500"
           style={{listStyle: "outside none none"}}
           ><a
-            href="https://courses.edx.org/certificates/cacb10803c064e24b18f8a4f9d5c62b2"
+            href="#"
             className="leading-4 bg-transparent cursor-pointer text-slate-900 hover:text-zinc-700"
             style={{textDecoration: "none", listStyle: "outside none none"}}>{certificateId}</a></span>
       </li>
