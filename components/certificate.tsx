@@ -37,8 +37,8 @@ export const Certificate: FC<CertificateProps> =  ({ name, certificateId, dateIs
       <Image
         src="/logos/logo.png"
         alt="Blockchain @ UCSB logo"
-        width={200}
-        height={200}
+        width={250}
+        height={250}
         />
         {/* ISSUE WITH IMAGE QUALITY */}
       <span className="uppercase sr-only" style={{lineHeight: "44px"}}>
