@@ -7,9 +7,10 @@ import Image from 'next/image';
 export interface CertificateProps {
   name: string;
   certificateId: string,
+  dateIssued: string,
 };
 
-export const Certificate: FC<CertificateProps> =  ({ name, certificateId }) => {
+export const Certificate: FC<CertificateProps> =  ({ name, certificateId, dateIssued }) => {
     return (<>
     
     <div
@@ -36,8 +37,8 @@ export const Certificate: FC<CertificateProps> =  ({ name, certificateId }) => {
       <Image
         src="/logos/logo.png"
         alt="Blockchain @ UCSB logo"
-        width={300}
-        height={300}
+        width={200}
+        height={200}
         />
         {/* ISSUE WITH IMAGE QUALITY */}
       <span className="uppercase sr-only" style={{lineHeight: "44px"}}>
@@ -88,7 +89,7 @@ export const Certificate: FC<CertificateProps> =  ({ name, certificateId }) => {
 
         <span
           className="block mx-0 mt-0 mb-6 text-sm leading-normal md:text-lg text-neutral-500"
-          >a course of study offered by Blockchain@UCSB, a student led organization at the University of California, Santa Barbara</span>
+          >a course of study offered by Blockchain @ UCSB, a student led organization at the University of California, Santa Barbara</span>
       </p>
     </div>
     <div
@@ -101,34 +102,43 @@ export const Certificate: FC<CertificateProps> =  ({ name, certificateId }) => {
       </h3>
       <div className="text-right">
         <div className="flex text-zinc-700" style={{flexFlow: "row wrap"}}>
-          <div className="mx-0 mt-0 mb-2 w-full md:w-1/2">
+          <div className="mx-0 mt-0 mb-2 w-full md:w-1/3">
             {/* Signature goes here */ }
+            <Image 
+              src="/signatures/jack-fineman.png" 
+              alt="Signature" 
+              width={200} 
+              height={200} 
+              className='mr-4'
+              />
             <h4
               className="mt-0 mb-2 text-sm font-semibold"
               style={{lineHeight: 1.6}}
             >
-              Instructor Name 1
+              Jack Fineman
             </h4>
             <p className="mt-0 mb-4 text-xs leading-normal text-neutral-500">
               <span className="leading-4 whitespace-pre-line"
-                >Blockchain @ UCSB, Lead Instructor</span
+                >Blockchain @ UCSB, President</span
               >
               <span className="block mt-1 italic leading-4"
                 >University of California, Santa Barbara</span
               >
             </p>
           </div>
-          <div className="m-0 w-full md:w-1/2">
+          <div className="mx-0 mt-0 mb-2 w-full md:w-1/3" />
+          <div className="m-0 w-full md:w-1/3">
             {/* Signature goes here */ }
+            <Image src="/signatures/ysabel-chen.png" alt="Signature" width={ 200 } height={ 200 } />
             <h4
               className="mt-0 mb-2 text-sm font-semibold"
               style={{lineHeight: 1.6}}
             >
-              Instructor Name 2
+              Ysabel Chen
             </h4>
             <p className="mt-0 mb-4 text-xs leading-normal text-neutral-500">
               <span className="leading-4 whitespace-pre-line"
-                >Blockchain @ UCSB, Instructor</span
+                >Blockchain @ UCSB, Head of Education</span
               >
               <span className="block mt-1 italic leading-4"
                 >University of California, Santa Barbara</span
@@ -163,7 +173,7 @@ export const Certificate: FC<CertificateProps> =  ({ name, certificateId }) => {
         <span
           className="block text-xs font-bold leading-normal text-gray-500"
           style={{listStyle: "outside none none"}}
-          >Issued June 4, 2022</span> {/* TODO: Change Date. Possibly make it a prop */}
+          >Issued {dateIssued}</span> {/* TODO: Change Date. Possibly make it a prop */}
       </li>
       <li
         className="mb-2 lg:mr-6 lg:inline-block lg:align-middle"
