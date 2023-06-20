@@ -2,6 +2,7 @@
 
 import { FC } from 'react';
 import { CldImage } from "next-cloudinary";
+import Image from 'next/image';
 
 export interface CertificateProps {
   name: string;
@@ -24,14 +25,20 @@ export const Certificate: FC<CertificateProps> =  ({ name, certificateId }) => {
         className="w-64 uppercase align-middle border-none md:w-64 lg:w-64"
         style={{lineHeight: "44px"}}
       /> */}
-      <CldImage
+      {/* <CldImage
               width={300}
               height={300}
               quality={100}
               src={`logos/hero`}
               alt="Blockchain @ UCSB logo"
               priority
-            />
+            /> */}
+      <Image
+        src="/logos/logo.png"
+        alt="Blockchain @ UCSB logo"
+        width={300}
+        height={300}
+        />
         {/* ISSUE WITH IMAGE QUALITY */}
       <span className="uppercase sr-only" style={{lineHeight: "44px"}}>
         Verified Certificate
